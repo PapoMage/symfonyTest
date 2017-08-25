@@ -1,0 +1,4 @@
+services:
+#    papo_user.example:
+#        class: Papo\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

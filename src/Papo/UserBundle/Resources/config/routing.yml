@@ -1,0 +1,30 @@
+papo_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PapoUserBundle:Default:index }
+
+papo_user_index:
+    path:     /user/index
+    defaults: { _controller: PapoUserBundle:User:index}
+
+papo_user_articles:
+    path:     /user/articles/{page}
+    defaults: { _controller: PapoUserBundle:User:articles, page: 1}
+    requirements: 
+      page: \d+
+
+
+papo_user_add:
+    path: /user/add
+    defaults: { _controller: PapoUserBundle:User:add}
+
+papo_user_edit:
+    path: /user/edit/{id}
+    defaults: { _controller: PapoUserBundle:User:edit}
+
+papo_user_view:
+    path: /user/view/{id}
+    defaults: { _controller: PapoUserBundle:User:view}
+
+papo_user_delete:
+    path: /user/delete/{id}
+    defaults: { _controller: PapoUserBundle:User:delete}
