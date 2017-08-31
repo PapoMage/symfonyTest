@@ -13,12 +13,15 @@ class UserController extends Controller
 
         $users = $em->getRepository('PapoUserBundle:User')->findAll(); //Permite acceder a todos los registros de la base de datos.
         $res = 'Lista de usuarios: <br />';
-
+        	/*
         foreach ($users as $user) {
         	$res .= 'Usuario: '. $user->getUsername(). ' - Email: '. $user->getEmail(). '<br />';
         }
 
         return new Response ($res);
+        */
+
+        return $this->render('PapoUserBundle:User:index.html.twig', array('users' => $users));
     }
 
     public function viewAction($id)
